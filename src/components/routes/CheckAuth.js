@@ -3,7 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import { isAuthenticated } from "./IsAuthenticate";
 
 const CheckAuth = () => {
-  return !isAuthenticated() ? <Outlet /> : <Navigate to={`/dashboard`} />;
+  return !isAuthenticated() ? <Outlet /> : <Navigate to={`/`} />;
 };
 
 export default CheckAuth;
