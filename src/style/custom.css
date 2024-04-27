@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Other.css */
+
+/* Styles for Selected Group Details */
+.selected-group-details {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 16px; /* Adjust as needed */
+  }
+
+.card-svg{
+  background-color: #dfdbe500;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='white' fill-opacity='0.30' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+  .card-purple {
+    background: rgb(142,90,206);
+    background: linear-gradient(90deg, rgba(142,90,206,1) 0%, rgba(176,104,249,1) 100%);
+  }
+  .card-tile {
+    background: #598392;
+    background: linear-gradient(90deg, #598392 0%, #124559 100%);
+  }
+  .card-blue {
+    background: #a2d2ff;
+    background: linear-gradient(90deg, #a2d2ff 0%, #3a86ff 100%);
+  }
+  .card-green {
+    background: rgb(46,175,74);
+    background: linear-gradient(90deg, rgba(46,175,74,1) 0%, rgba(141,210,52,1) 100%);
+  }
+  
+  /* Responsive Layout for Selected Group Details */
+  @media (max-width: 768px) {
+    .selected-group-details {
+      padding: 12px;
+    }
+  }
+  
+  /* Typography and Colors */
+  .selected-group-details h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px; /* Adjust as needed */
+  }
+  
+  .selected-group-details table {
+    width: 100%;
+  }
+  
+  .selected-group-details th,
+  .selected-group-details td {
+    font-size: 14px;
+    color: #555;
+    text-align: left; /* Adjust as needed */
+  }
+  
+  /* Add space between table header rows */
+  .selected-group-details thead tr {
+    margin-bottom: 8px; /* Adjust as needed */
+  }
+
+  /* Header styles */
+.selected-group-details .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px; /* Adjust as needed */
+}
+
+.selected-group-details .header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+  
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .small-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+  
+  .small-table th, .small-table td {
+    /* border: 1px solid #ddd; */
+    padding: 6px; /* Adjust padding as needed */
+    text-align: left;
+    font-size: 12px; /* Adjust font size as needed */
+  }
+  
+  @media (max-width: 600px) {
+    .small-table th, .small-table td {
+      font-size: 10px; /* Further reduce font size on smaller screens */
+    }
+  }
+  
+
+.small-font {
+    font-size: xx-small; /* or any other desired font size */
+}
+
+/* Add this to your CSS stylesheet */
+.small-attractive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.small-attractive-table th, .small-attractive-table td {
+    padding: 6px; /* Adjust the padding to make it smaller */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 12px; /* Adjust the font size to make it smaller */
+}
+
+.small-attractive-table th {
+    background-color: #f2f2f2;
+}
+
+.small-attractive-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.LoginBgGradient {
+    @apply [background:rgb(102,92,205)] [background:linear-gradient(220deg,rgba(102,92,205,1)_0%,rgba(66,181,225,1)_100%)]
+}
+
+.LoginButtonGradient {
+    background: rgb(102, 92, 205);
+    background: linear-gradient(90deg, rgba(102, 92, 205, 1) 0%, rgba(66, 181, 225, 1) 100%);
+}
+
+.LoginFormglassEffect {
+    background: rgba(208, 209, 217, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(26,33,123,0.3);
+}
+.LoginContainerGlassEffect {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.bg-Image{
+    /* background-image: url("./../../public/accountant-calculating-profit-with-financial-analysis-graphs.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.MuiPaper-root{
+    width: fit-content!important;
+    overflow-y: scroll;
+    height: 100%!important;
+}
+
+.MuiTable-root{
+    @apply w-auto  
+}
+
+.MuiTable-stickyHeader{
+    @apply w-auto
+}
+
+.scrollbar::-webkit-scrollbar {
+    @apply w-1 h-5 bg-black
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    @apply bg-white
+}
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+    @apply rounded-full border-[3px_solid_#f6f7ed] 
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full border-[3px_solid_#f6f7ed]
+}
+.scrollbary::-webkit-scrollbar {
+    @apply w-1 h-1 bg-black
+}
+
+.scrollbary::-webkit-scrollbar-track {
+    @apply bg-white
+}
+
+.scrollbary:hover::-webkit-scrollbar-thumb {
+    @apply rounded-full border-[3px_solid_#f6f7ed] 
+}
+
+.scrollbary::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full border-[3px_solid_#f6f7ed]
+}
+
+#chartdiv {
+    width: 100%;
+    height: 550px;
+}
+
+.MuiTableCell-root{
+
+}
+
+@keyframes ldio-br89b6sh1ef {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+.ldio-br89b6sh1ef div {
+  left: 94px;
+  top: 48px;
+  position: absolute;
+  animation: ldio-br89b6sh1ef linear 1s infinite;
+  background: #004aad;
+  width: 12px;
+  height: 24px;
+  border-radius: 6px / 12px;
+  transform-origin: 6px 52px;
+}.ldio-br89b6sh1ef div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -0.9166666666666666s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -0.8333333333333334s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.75s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.6666666666666666s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.5833333333333334s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.5s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.4166666666666667s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.3333333333333333s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.25s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.16666666666666666s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.08333333333333333s;
+  background: #004aad;
+}.ldio-br89b6sh1ef div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+  background: #004aad;
+}
+.loadingio-spinner-spinner-trifovnlv7q {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background:transparent;
+}
+.ldio-br89b6sh1ef {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-br89b6sh1ef div { box-sizing: content-box; }
+
+/* {
+    
+}
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px) */
