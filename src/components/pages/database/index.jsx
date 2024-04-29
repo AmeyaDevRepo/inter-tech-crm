@@ -68,7 +68,6 @@ const Database = () => {
                                 >
                                     Filter
                                 </button>
-                                <FilterSlider isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
                             </div>
                         </div>
                         <div className='d-flex p-2 overflow-y-scroll scrollbar'>
@@ -80,6 +79,7 @@ const Database = () => {
             <DataTab isVisible={isVisible} setVisible={setIsVisible} selectedData={selectedData} />
             {addForm && <AddForm setAddForm={setAddForm} onSubmit={handleAddFormSubmit} />}
             {addMultipleFormVisible && <AddMultipleForm onSubmit={handleAddMultipleFormSubmit} />} {/* Render AddMultipleForm if addMultipleFormVisible is true */}
+            {isFilterOpen &&  <FilterSlider isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />}
         </div>
     )
 }

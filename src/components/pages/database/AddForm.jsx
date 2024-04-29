@@ -28,7 +28,7 @@ const AddForm = ({ setAddForm, onSubmit }) => {
     };
 
     const toggleMultipleForm = () => {
-        setAddForm(false)
+        // setAddForm(false)
         setShowMultipleForm(prevState => !prevState);
     };
 
@@ -37,9 +37,9 @@ const AddForm = ({ setAddForm, onSubmit }) => {
     };
 
     return (
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-200 bg-opacity-75 z-20">
-            <div className="bg-white p-8 rounded-md">
-                <div className='z-[30] bg-[rgba(11,11,11,0.3)] absolute top-0 left-0 h-screen w-screen' onClick={() => { close(); }}></div>
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-200 bg-opacity-75 z-10">
+                <div className='z-[11] bg-[rgba(11,11,11,0.3)] absolute top-0 left-0 h-screen w-screen' onClick={() => { close(); }}></div>
+            <div className="bg-white p-8 rounded-md z-[12]">
                 <motion.button onClick={() => { close(); }} whileTap={{ scale: 0.85 }} transition={{ duration: 0.3 }} className='flex sticky float-right top-4 right-4 justify-center items-center px-2 py-1 text-xs bg-gray-50 rounded-md'><CloseIcon fontSize='small' /></motion.button>
 
                 <h2 className="text-2xl font-bold mb-4">Database</h2>

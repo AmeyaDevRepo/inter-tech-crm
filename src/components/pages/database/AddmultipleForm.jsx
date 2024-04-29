@@ -40,8 +40,8 @@ const AddMultipleForm = ({ onSubmit }) => {
     };
 
     return (
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-gray-200 bg-opacity-75 z-50">
-            <div className="bg-white p-8 rounded-md">
+        <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center bg-gray-200 bg-opacity-75 z-[50]">
+            <div className="bg-white p-8 rounded-md z-[51]">
                 <h2 className="text-2xl font-bold mb-4">Data base</h2>
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
                     <div>
