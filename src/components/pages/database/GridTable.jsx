@@ -15,9 +15,14 @@ function createData(name, phone, email, source, company, designation, zone ) {
 }
 
 const staticData = [
-    createData('John Doe', '123-456-7890', 'john@example.com', '123 Main St', 'rtyu',  'ABC123XYZ', 'East', true),
-    createData('Jane Smith', '987-654-3210', 'jane@example.com', '456 Elm St', 'ertyu','DEF456UVW', 'West', false),
+    createData('Rahul Sharma', '98765-43210', 'rahul.sharma@example.com', 'Delhi', 'ABC Corporation', 'Manager', 'North'),
+    createData('Priya Patel', '87654-32109', 'priya.patel@example.com', 'Mumbai', 'XYZ Ltd', 'Senior Engineer', 'West'),
+    createData('Amit Singh', '76543-21098', 'amit.singh@example.com', 'Bangalore', 'PQR Pvt Ltd', 'Software Developer', 'South'),
+    createData('Anjali Gupta', '65432-10987', 'anjali.gupta@example.com', 'Kolkata', 'LMN Infotech', 'Team Lead', 'East'),
+    createData('Suresh Kumar', '54321-09876', 'suresh.kumar@example.com', 'Chennai', 'JKL Solutions', 'Consultant', 'South'),
 ];
+
+
 
 export default function GridTable({ setData }) {
     return (
@@ -74,24 +79,17 @@ export default function GridTable({ setData }) {
                                 {row.email}
                             </TableCell>
                             <TableCell className='truncate max-w-40' align="left" sx={{ paddingX: 2 }}>
-                                {row.designation}
+                                {row.source}
                             </TableCell>
                             <TableCell className='truncate max-w-40' align="left" sx={{ paddingX: 2 }}>
-                                {row.source}
+                                {row.company}
+                            </TableCell>
+                            <TableCell className='truncate max-w-40' align="left" sx={{ paddingX: 2 }}>
+                                {row.designation}
                             </TableCell>
                             <TableCell className='truncate max-w-40' align="center" sx={{ paddingX: 2 }}>
                                 {row.zone}
                             </TableCell>
-                            <TableCell className='truncate max-w-40' align="center" sx={{ paddingX: 2 }}>
-                                {row.company}
-                            </TableCell>
-                            {/* <TableCell className='truncate' align="right" sx={{ paddingX: 0, display: 'flex', justifyContent: "center" }}>
-                                <div className={`w-[40px] bg-[rgba(65,64,64,0.28)] flex ${row.status ? "justify-end" : "justify-start"} rounded-full px-1 py-1`}>
-                                    <div className={`h-[15px] w-[15px] ${row.status ? "bg-green-700" : "bg-gray-700"} rounded-full flex justify-center items-center`}>
-                                        <CheckIcon sx={{ fontSize: "10px" }} className='text-white text-[6px]' />
-                                    </div>
-                                </div>
-                            </TableCell> */}
                             <TableCell className='truncate' align="left" sx={{ paddingX: 2, }} onClick={() => setData(row)}>
                                 <SaveAsOutlinedIcon fontSize='small'/>
                             </TableCell>

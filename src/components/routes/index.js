@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CheckAuth from './CheckAuth';
 import Dashboard from '../pages/dashboard/index';
 import AuthRoute from './AuthRoute';
-import DataEntry from '../pages/data entry/index';
+import Database from '../pages/database/index';
 
 const AllRoutes = () => {
     return (
@@ -16,7 +16,7 @@ const AllRoutes = () => {
                 <Route element={<AuthRoute />}>
                     {/* Dashboard */}
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/" element={<DataEntry />} />
+                    <Route path="/" element={<Database />} />
                 </Route>
             </Routes>
         </Router>

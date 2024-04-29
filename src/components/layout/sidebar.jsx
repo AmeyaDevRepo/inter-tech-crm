@@ -28,7 +28,7 @@ const Sidebar = () => {
                 <NavLink to='/dashboard' className={({ isActive }) => `${isActive ? "text-[#004aad]" : "text-gray-600"} hover:bg-gray-50 cursor-pointer flex justify-start items-center w-full py-2 px-4 gap-2 relative`}><DashboardIcon fontSize='small' />Dashboard </NavLink>
 
 
-                <NavLink to="/data-entry" className={({ isActive }) => `${isActive ? "text-[#004aad]" : ""} px-8 no-underline flex justify-start items-center py-2 cursor-pointer bg-gray-100 hover:bg-gray-50 gap-2`}><PaidIcon fontSize='small' />Data Entry</NavLink>
+                <NavLink to="/database" className={({ isActive }) => `${isActive ? "text-[#004aad]" : ""} px-8 no-underline flex justify-start items-center py-2 cursor-pointer bg-gray-100 hover:bg-gray-50 gap-2`}><PaidIcon fontSize='small' />Database</NavLink>
 
 
             </div>

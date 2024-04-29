@@ -3,7 +3,6 @@ import {PieChart,Pie,Sector,Cell,ResponsiveContainer} from 'recharts'
 import svg from '../../../assets/02.svg'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import clogo from '../../../assets/clogo.svg'
-// import formatNum from 'human-number'
 import {motion} from 'framer-motion'
 const Chart = ({}) => {
     const data = [
@@ -26,7 +25,7 @@ const Chart = ({}) => {
         const x = cx + radiusX * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
         return (
-          <text x={x} y={y} fill="black" className='text-[8px]' textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+          <text x={x} y={y} fill="black" className='font-semibold text-base' textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
             {index == 0 ? "Facebook" : index == 1 ? "Linkedin": index ==2 ? "BNI" : index== 3 ? "Others" : ""}
           </text>
         );
@@ -37,25 +36,11 @@ const Chart = ({}) => {
         const x = cx + radiusX * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
         return (
-          <text x={x} y={y} fill="black" className='text-[8px]' textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+          <text x={x} y={y} fill="black" className='font-semibold text-base' textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
             {index == 0 ? "East" : index == 1 ? "West": index ==2 ? "North" : index== 3 ? "South" : ""}
           </text>
         );
       };
-
-    //   const revenueEvent = (value, index) => {
-    //     let total = (d?.data?.salarieds?.length > 1) &&
-    //     d?.data?.salarieds?.map((a)=>{return a?.revenue}).sort((a,b)=>a-b);
-    //     let avg = Math.ceil(total[total.length-1] ? total[total.length-1] : 0) / 4;
-    //     const data = gridData?.data?.salarieds?.filter((a)=>{return a?.revenue < Math.round((index+1)*avg)+1 && a?.revenue > Math.round(index*avg)});
-    //     setGridData({data:{salarieds:data}})
-    //   }
-    //   const resetRevenueEvent = ()=>{
-    //     setGridData(d)
-    //   }
-    //   const FormatNum = (NUM) => {
-    //     return Math.round(Number.parseInt(NUM)) + NUM[NUM.length-1]
-    //   }
   return (
         true ? 
                 <div className='flex justify-between items-center w-full'>
@@ -70,7 +55,7 @@ const Chart = ({}) => {
                         </div>
                         <div className='h-full w-full z-[4] px-6 py-6 relative'>
                             <h1 className='text-white font-semibold text-base'>No Of Leads </h1>
-                            <h1 className='font-bold text-lg text-white flex items-center'>456789</h1>
+                            <h1 className='font-bold text-lg text-white flex items-center'>9000</h1>
                             <img src={clogo} alt=""  className='absolute right-6 bottom-6'/>
                             {/* <h1 className='text-xs font-light text-white absolute bottom-6'> Current Financial Year</h1> */}
                         </div>
@@ -86,10 +71,9 @@ const Chart = ({}) => {
                         </div>
                         <div className='h-full w-full z-[4] px-6 py-6 relative'>
                             <h1 className='text-white font-semibold text-base'>Leads added in last 30 days </h1>
-                            <h1 className='font-bold text-lg text-white flex items-center'>675678
+                            <h1 className='font-bold text-lg text-white flex items-center'>10,000
                             </h1>
                             <img src={clogo} alt=""  className='absolute right-6 bottom-6'/>
-                            {/* <h1 className='text-xs font-light text-white absolute bottom-6'> Current Financial Year</h1> */}
                         </div>
                     </motion.div>
                   <div className='flex flex-col justify-center items-center'>
@@ -110,7 +94,7 @@ const Chart = ({}) => {
                           ))}
                       </Pie>
                   </PieChart>
-                    <h1 className='text-[10px]'>Leads by Source</h1>
+                    <h1 className='font-semibold text-base'>Leads by Source</h1>
                   </div>
                   <div className='flex flex-col justify-center items-center'>
                   <PieChart width={180} height={180}>
@@ -130,7 +114,7 @@ const Chart = ({}) => {
                           ))}
                       </Pie>
                   </PieChart>
-                  <h1 className='text-[10px] py-1'> Leads by Zone
+                  <h1 className='font-semibold text-base'> Leads by Zone
                   </h1>
                   </div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react'
 import Sidebar from '../../layout/sidebar';
 import GridTable from './GridTable';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
@@ -8,11 +8,13 @@ import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined
 import { motion } from 'framer-motion';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import Chart from './Chart';
-// import DataTab from './DataTab';
+import DataTab from './DataTab'
 // import AddForm from './AddForm';
 // import EditForm from './EditForm';
 
-const dataEntry = () => {
+const Database = () => {
+    const [isVisible, setIsVisible] = React.useState(false);
+
     return (
         <div className='flex w-screen h-screen overflow-hidden'>
             {/* Sidebar */}
@@ -48,11 +50,11 @@ const dataEntry = () => {
                     </div>
                 </div>
             </div>
-            {/* <DataTab isVisible={false} setVisible={() => {}} setShowEditForm={() => {}}  data={null} setData={() => {}}/> */}
+            <DataTab isVisible={isVisible} setVisible={setIsVisible} />
             {/* <AddForm addForm={false} setAddForm={() => {}}/> */}
             {/* <EditForm showEditForm={false} setShowEditForm={() => {}} data={null} setData={() => {}}/> */}
         </div>
     )
 }
 
-export default dataEntry;
+export default Database;
