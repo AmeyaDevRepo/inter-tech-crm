@@ -12,7 +12,7 @@ const AllRoutes = () => {
         <Router> {/* Wrap your routes in a Router component */}
             <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/" element={<DataEntry />} />
+                    <Route path="/" element={<Database />} />
 
             </Routes>
         </Router>

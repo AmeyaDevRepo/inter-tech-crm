@@ -15,21 +15,19 @@ function createData(name, phone, email, source, company, designation, zone ) {
 }
 
 const staticData = [
-    createData('Rahul Sharma', '98765-43210', 'rahul.sharma@example.com', 'Delhi', 'ABC Corporation', 'Manager', 'North'),
-    createData('Priya Patel', '87654-32109', 'priya.patel@example.com', 'Mumbai', 'XYZ Ltd', 'Senior Engineer', 'West'),
-    createData('Amit Singh', '76543-21098', 'amit.singh@example.com', 'Bangalore', 'PQR Pvt Ltd', 'Software Developer', 'South'),
-    createData('Anjali Gupta', '65432-10987', 'anjali.gupta@example.com', 'Kolkata', 'LMN Infotech', 'Team Lead', 'East'),
-    createData('Suresh Kumar', '54321-09876', 'suresh.kumar@example.com', 'Chennai', 'JKL Solutions', 'Consultant', 'South'),
+    createData('Rahul Sharma', '98765-43210', 'rahul.sharma@example.com', 'Linkedin', 'Software Corporation', 'Manager', 'North'),
+    createData('Priya Patel', '87654-32109', 'priya.patel@example.com', 'FaceBook', 'Web pvt Ltd', 'Senior Engineer', 'West'),
+    createData('Amit Singh', '76543-21098', 'amit.singh@example.com', 'BNI', 'Amit Pvt Ltd', 'Software Developer', 'South'),
+    createData('Anjali Gupta', '65432-10987', 'anjali.gupta@example.com', 'Linkedin', 'LMN Infotech', 'Team Lead', 'East'),
+    createData('Suresh Kumar', '54321-09876', 'suresh.kumar@example.com', 'Others', 'JKL Solutions', 'Consultant', 'South'),
 ];
 
-
-
-export default function GridTable({ setData }) {
+export default function GridTable({ setData, openDataTab }) {
     return (
         <TableContainer component={Paper} sx={{ width: "auto", height: "100%" }} className='scrollbar overflow-y-scroll overflow-x-scroll scrollbary border-[1px]'>
             <Table size="small" sx={{ width: "auto" }} aria-label="simple table">
                 <TableHead className='bg-[#f1f1f2] sticky top-0 z-10' sx={{ width: "auto" }} >
-                    <TableRow sx={{ width: "auto" }}>
+                    <TableRow sx={{ width: "auto" }} >
                         <TableCell padding="checkbox" sx={{ paddingX: 2 }}>
                             <Checkbox color="primary" />
                         </TableCell>
@@ -54,7 +52,6 @@ export default function GridTable({ setData }) {
                         <TableCell sx={{ paddingX: 2 }} align="left">
                             Zone
                         </TableCell>
-                       
                         <TableCell sx={{ paddingX: 2 }} align="left"></TableCell>
                         <TableCell sx={{ paddingX: 2 }} align="left"></TableCell>
                     </TableRow>
@@ -63,6 +60,7 @@ export default function GridTable({ setData }) {
                     {staticData.map((row, i) => (
                         <TableRow
                             key={i}
+                            onClick={() => openDataTab(row)}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 }, width: "auto", paddingX: 0 }}
                             className='hover:bg-gray-50 cursor-pointer'
                         >
