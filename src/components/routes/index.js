@@ -11,13 +11,9 @@ const AllRoutes = () => {
     return (
         <Router> {/* Wrap your routes in a Router component */}
             <Routes>
-                {/* Auth */}
-                <Route element={<CheckAuth />} />
-                <Route element={<AuthRoute />}>
-                    {/* Dashboard */}
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/" element={<Database />} />
-                </Route>
+                    <Route path="/" element={<DataEntry />} />
+
             </Routes>
         </Router>
     );
