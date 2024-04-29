@@ -12,16 +12,17 @@ import DataTab from './DataTab';
 import AddForm from './AddForm';
 import AddMultipleForm from './AddmultipleForm';
 import FilterSlider from './filter';
+
 const Database = () => {
     const [isVisible, setIsVisible] = React.useState(false);
     const [selectedData, setSelectedData] = useState(null);
     const [addForm, setAddForm] = useState(false);
     const [addMultipleFormVisible, setAddMultipleFormVisible] = useState(false);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-    const handleAddMultipleFormSubmit = (formData) => {
-        console.log(formData); // Handle the form data submission
+    const handleSubmitForm = (formData) => {
+        console.log(formData);
     };
-
 
     const openDataTab = (data) => {
         setSelectedData(data);
@@ -31,12 +32,10 @@ const Database = () => {
     const handleAddFormSubmit = (formData) => {
         console.log(formData); // You can handle the form data here, for example, send it to an API
     };
-    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     const handleFilterClick = () => {
         setIsFilterOpen(!isFilterOpen);
     };
-
 
     return (
         <div className='flex w-screen h-screen overflow-hidden'>
@@ -78,10 +77,10 @@ const Database = () => {
             </div>
             <DataTab isVisible={isVisible} setVisible={setIsVisible} selectedData={selectedData} />
             {addForm && <AddForm setAddForm={setAddForm} onSubmit={handleAddFormSubmit} />}
-            {addMultipleFormVisible && <AddMultipleForm onSubmit={handleAddMultipleFormSubmit} />} {/* Render AddMultipleForm if addMultipleFormVisible is true */}
+            {addMultipleFormVisible && <AddMultipleForm onSubmit={handleSubmitForm} />} {/* Render AddMultipleForm if addMultipleFormVisible is true */}
             {isFilterOpen &&  <FilterSlider isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />}
         </div>
-    )
+    );
 }
 
 export default Database;

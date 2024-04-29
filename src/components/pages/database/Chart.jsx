@@ -71,7 +71,7 @@ const Chart = ({}) => {
                         </div>
                         <div className='h-full w-full z-[4] px-6 py-6 relative'>
                             <h1 className='text-white font-semibold text-base'>Leads added in last 30 days </h1>
-                            <h1 className='font-bold text-lg text-white flex items-center'>10,000
+                            <h1 className='font-bold text-lg text-white flex items-center'>70
                             </h1>
                             <img src={clogo} alt=""  className='absolute right-6 bottom-6'/>
                         </div>

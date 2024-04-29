@@ -76,7 +76,7 @@ const AddForm = ({ setAddForm, onSubmit }) => {
                             <input type="text" id="zone" name="zone" value={formData.zone} onChange={handleChange} className="border-gray-300 border p-2 w-full rounded-md" />
                         </div>
                         <div className="col-span-2 flex justify-between">
-                            <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded-md">Add</button>
+                            <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded-md" onClick={() => { close(); }}>submit</button>
                             <button onClick={toggleMultipleForm} className="bg-blue-600 text-white py-2 px-4 rounded-md">Add Multiple</button>
                         </div>
                     </form>
